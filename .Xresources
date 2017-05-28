@@ -1,0 +1,36 @@
+!XTerm:font:     -adobe-courier-medium-r-normal-*-*-120-*-*-m-*-utf8-2
+!XTerm:font:     -misc-fixed-medium-r-normal-*-12-*-*-*-*-*-iso8859-2
+!XTerm*font:     7x13
+!XTerm*boldfont: 7x13bold
+XTerm:bitstream vera sans mono:size=16:antialias=true
+!XTerm*menufont: -b&h-lucidatypewriter-bold-r-normal-sans-12-120-75-75-m-70-utf8-1
+XTerm*background:       black
+XTerm*foreground:       gray
+XTerm*cursorColor:      gray
+XTerm*pointerColor:     gray
+XTerm*pointerColorBackground:   black
+!XTerm*color0:   Black
+!XTerm*color1:   Red
+!XTerm*color2:   Green
+!XTerm*color3:   Yellow
+!XTerm*color4:   Blue
+!XTerm*color5:   Magenta
+!XTerm*color6:   Cyan
+!XTerm*color7:   White
+XTerm*reverseWrap:      true
+XTerm*jumpScroll:       false
+XTerm*scrollKey:        true
+XTerm*saveLines:        20480
+!XTerm*scrollBar:        true
+XTerm*charClass:        33:48, 37:48, 45-47:48, 126:48
+XTerm*visualBell:	    false
+xterm*locale:           pl_PL.UTF-8
+xterm*utf8:             1
+XTerm*scrollTtyOutput:  false
+XTerm*scrollWithBuffer: false
+XTerm.VT100.translations: #override \
+Ctrl <Key>V:    insert-selection(CLIPBOARD) \n\
+Ctrl <Key>C:    copy-selection(CLIPBOARD) \n\
+Ctrl <Key>X:   string(0x03)
+
+
