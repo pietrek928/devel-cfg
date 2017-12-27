@@ -398,6 +398,14 @@ function! <SID>BufcloseCloseIt()
 endfunction
 
 " Don't use Ex mode, use Q for formatting
+nnoremap <Tab> <Esc>
+vnoremap <Tab> <Esc>gV
+onoremap <Tab> <Esc>
+cnoremap <Tab> <C-C><Esc>
+inoremap <Tab> <Esc>`^
+inoremap <Leader><Tab> <Tab>
+inoremap <Esc> <Tab>
+
 map Q gq
 nmap r :w<CR>:!make run<CR>
 nmap c :w<CR>:!make<CR>
@@ -405,12 +413,16 @@ nmap b :w<CR>:!make debug<CR><CR>
 nmap s :w<CR>:!make asm<CR><CR>
 nmap e :w<CR>:!make ppc<CR><CR>
 nmap q :q<CR>
-nmap w :w<CR>
+nmap z :w<CR>
+nmap - <Plug>NERDCommenterInvert
+vmap - <Plug>NERDCommenterInvert
+nmap _ <Plug>NERDCommenterSexy
+vmap _ <Plug>NERDCommenterSexy
 nmap <C-w> :vsplit<CR>
-vmap 1 "+y<CR>
-vmap 3 "*y<CR>
-nmap 2 "+p
-nmap 4 "*p
+vmap c "+y<CR>
+vmap b "*y<CR>
+nmap c "+p
+nmap b "*p
 nmap <F5> :edit<CR>
 nmap <F6> :q<CR>:q<CR>:q<CR>:q<CR>:q<CR>:q<CR>:q<CR>
 
