@@ -404,16 +404,42 @@ onoremap <Tab> <Esc>
 cnoremap <Tab> <C-C><Esc>
 inoremap <Tab> <Esc>`^
 inoremap <Leader><Tab> <Tab>
-inoremap <Esc> <Tab>
+nnoremap <S-Tab> i<Tab>
+inoremap <S-Tab> <Tab>
+
+" moving
+nnoremap L l
+inoremap L l
+nnoremap H h
+inoremap H h
+nnoremap h b
+vnoremap h b
+nnoremap l w
+vnoremap l w
+"nnoremap jj 5j
+nnoremap J <PageDown>
+vnoremap J <PageDown>
+nnoremap K <PageUp>
+vnoremap K <PageUp>
+
+inoremap <C-Bslash> \
+nnoremap <Bslash> <C-N>
+vnoremap <Bslash> <C-N>
+inoremap <Bslash> <C-N>
+
+nnoremap <C-u> <C-r>
+inoremap <C-u> <Esc><C-r>
 
 map Q gq
 nmap r :w<CR>:!make run<CR>
-nmap c :w<CR>:!make<CR>
-nmap b :w<CR>:!make debug<CR><CR>
-nmap s :w<CR>:!make asm<CR><CR>
-nmap e :w<CR>:!make ppc<CR><CR>
+imap <C-r> <Esc>:w<CR>:!make run<CR>
+nmap <C-r> <Esc>:w<CR>:!make run<CR>
+nmap c :w<CR>:make<CR>
+"nmap b :w<CR>:make debug<CR><CR>
+nmap s :w<CR>:make asm<CR><CR>
+nmap e :w<CR>:make ppc<CR><CR>
 nmap q :q<CR>
-nmap z :w<CR>
+nmap w :w<CR>
 nmap - <Plug>NERDCommenterInvert
 vmap - <Plug>NERDCommenterInvert
 nmap _ <Plug>NERDCommenterSexy
