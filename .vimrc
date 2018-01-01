@@ -408,10 +408,10 @@ nnoremap <S-Tab> i<Tab>
 inoremap <S-Tab> <Tab>
 
 " moving
-nnoremap L l
-inoremap L l
-nnoremap H h
-inoremap H h
+nnoremap L <End>
+vnoremap L <End>
+nnoremap H <Home>
+vnoremap H <Home>
 nnoremap h b
 vnoremap h b
 nnoremap l w
