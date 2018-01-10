@@ -431,11 +431,11 @@ nnoremap <C-u> <C-r>
 inoremap <C-u> <Esc><C-r>
 
 map Q gq
-nmap r :w<CR>:!make run<CR>
+nmap R :w<CR>:!make run<CR>
 imap <C-r> <Esc>:w<CR>:!make run<CR>
 nmap <C-r> <Esc>:w<CR>:!make run<CR>
-nmap c :w<CR>:make<CR>
-"nmap b :w<CR>:make debug<CR><CR>
+nmap C :w<CR>:make<CR>
+nmap B :w<CR>:!make debug<CR><CR>
 nmap s :w<CR>:make asm<CR><CR>
 nmap e :w<CR>:make ppc<CR><CR>
 nmap q :q<CR>
@@ -445,6 +445,7 @@ vmap - <Plug>NERDCommenterInvert
 nmap _ <Plug>NERDCommenterSexy
 vmap _ <Plug>NERDCommenterSexy
 nmap <C-w> :vsplit<CR>
+imap <C-p> <Esc>p
 vmap c "+y<CR>
 vmap b "*y<CR>
 nmap c "+p
