@@ -402,7 +402,7 @@ nnoremap <Tab> <Esc>
 vnoremap <Tab> <Esc>gV
 onoremap <Tab> <Esc>
 cnoremap <Tab> <C-C><Esc>
-inoremap <Tab> <Esc>`^
+inoremap <Tab> <Esc>
 inoremap <Leader><Tab> <Tab>
 nnoremap <S-Tab> i<Tab>
 inoremap <S-Tab> <Tab>
@@ -416,11 +416,15 @@ nnoremap h b
 vnoremap h b
 nnoremap l w
 vnoremap l w
-"nnoremap jj 5j
-nnoremap J <PageDown>
-vnoremap J <PageDown>
-nnoremap K <PageUp>
-vnoremap K <PageUp>
+nnoremap J 10j
+vnoremap J 10j
+nnoremap K 10k
+vnoremap K 10k
+nnoremap <C-j> <PageDown>
+vnoremap <C-j> <PageDown>
+nnoremap <C-k> <PageUp>
+vnoremap <C-k> <PageUp>
+
 
 inoremap <C-Bslash> \
 nnoremap <Bslash> <C-N>
