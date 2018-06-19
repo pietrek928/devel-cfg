@@ -425,7 +425,6 @@ vnoremap <C-j> <PageDown>
 nnoremap <C-k> <PageUp>
 vnoremap <C-k> <PageUp>
 
-
 inoremap <C-Bslash> \
 nnoremap <Bslash> <C-N>
 vnoremap <Bslash> <C-N>
@@ -435,6 +434,7 @@ nnoremap <C-u> <C-r>
 inoremap <C-u> <Esc><C-r>
 
 map Q gq
+nmap r :w<CR>:!make run<CR>
 nmap R :w<CR>:!make run<CR>
 imap <C-r> <Esc>:w<CR>:!make run<CR>
 nmap <C-r> <Esc>:w<CR>:!make run<CR>
@@ -462,7 +462,7 @@ if has('mouse')
 endif
 
 set number
-command T NERDTree
+nmap T NERDTree
 command Q q | q | q | q | q | q | q | q | q | q | q | q | q
 
 set shiftwidth=4 tabstop=4 expandtab
