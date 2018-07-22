@@ -448,7 +448,6 @@ nmap - <Plug>NERDCommenterInvert
 vmap - <Plug>NERDCommenterInvert
 nmap _ <Plug>NERDCommenterSexy
 vmap _ <Plug>NERDCommenterSexy
-nmap <C-w> :vsplit<CR>
 imap <C-p> <Esc>p
 vmap c "+y<CR>
 vmap b "*y<CR>
@@ -456,6 +455,21 @@ nmap c "+p
 nmap b "*p
 nmap <F5> :edit<CR>
 nmap <F6> :q<CR>:q<CR>:q<CR>:q<CR>:q<CR>:q<CR>:q<CR>
+
+map <C-w> :vsplit<CR>
+map <C-e> :split<CR>
+
+nmap <silent> ; :wincmd h<CR>
+nmap <silent> ' :wincmd l<CR>
+nnoremap <silent> <C-Left> :wincmd h<CR>
+nnoremap <silent> <C-Right> :wincmd l<CR>
+nnoremap <silent> <C-Down> :wincmd j<CR>
+nnoremap <silent> <C-Up> :wincmd k<CR>
+
+inoremap <silent> <C-Left> <Esc>:wincmd h<CR>i
+inoremap <silent> <C-Right> <Esc>:wincmd l<CR>i
+inoremap <silent> <C-Down> <Esc>:wincmd j<CR>i
+inoremap <silent> <C-Up> <Esc>:wincmd k<CR>i
 
 if has('mouse')
     set mouse=a

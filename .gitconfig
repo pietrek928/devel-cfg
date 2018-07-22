@@ -1,0 +1,11 @@
+[user]
+	name = Pietrek xD
+	email = pietrek.j@gmail.com
+[push]
+	default = current
+[core]
+	editor = vim
+[credential "https://github.com"]
+	username = pietrek928
+[credential]
+	helper = store

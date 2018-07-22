@@ -20,7 +20,6 @@ alias make='make -j 8'
 alias grep='grep --color'
 alias sc='cat ~/.bash_history | grep -i '
 alias cls='printf "\033c"'
-alias gpush='printf "Commit message: " && read c && git commit -am "$c" && git pull && git push -u origin master'
 
 alias ii="git status && git branch -v"
 alias gf="find . | grep -i "
@@ -63,7 +62,7 @@ function mm() {
         fi
     fi
     #git rebase origin/$(mb)
-    git checkout $(mb) && git pull origin $(mb) || return 1
+    git checkout --recurse-submodules $(mb) && git pull origin $(mb) || return 1
 }
 
 function startb() {
@@ -85,10 +84,11 @@ function bb() {
     fi
     mm
     echo "branch: $1"
-    git checkout "$1" || return 1
+    git checkout --recurse-submodules "$1" || return 1
+    #git submodule update --recursive || return 1
     #git fetch && git checkout origin/master || return 1
     echo "SUCCESS"
-    rb || return 1
+    #rb || return 1
     ii
 }
 
@@ -96,20 +96,27 @@ function rb() {
     git rebase $(mb) || return 1
 }
 
-function cc() {
-    git diff
-    ii
-    aa || return 1
+#function cc() {
+    #git diff
+    #ii
+    #aa || return 1
     #echo -n "branch: "
     #read $branch
-    git commit --amend && git push -f origin "HEAD:$(git rev-parse --abbrev-ref HEAD)" || return 1
+    #git commit --amend && git push -f origin "HEAD:$(git rev-parse --abbrev-ref HEAD)" || return 1
     # origin "HEAD:/refs/for/$branch"
     #mm || return 1
-}
+#}
 
 function elo() {
     mm || return 1
 }
+
+function __grename() {
+    git grep -l "$1" | xargs sed -i "s/$1/$2/g"
+}
+
+#alias gpush='git diff && aa && printf "Commit message: " && read c && git commit -m "$c" && git pull && git push'
+alias gpush='git diff && aa && printf "Commit message: " && read c && git commit -m "$c" && git push'
 
 XSET=$(which xset 2> /dev/null)
 if [ -f "$XSET" ] ;
@@ -117,4 +124,5 @@ then
     xset b off
 fi
 
+alias tf='cd ~/Documents/robota/tensorflight && source env2/bin/activate && cd code'
 
