@@ -1,5 +1,5 @@
 #!/bin/bash
-CFG=".Xresources .bashrc .vimrc"
+CFG=".Xresources .bashrc .gitconfig .vimrc"
 cp -b $CFG ~/
 xrdb ~/.Xresources
 
