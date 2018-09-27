@@ -62,6 +62,7 @@ function mm() {
         fi
     fi
     #git rebase origin/$(mb)
+    git fetch || return 1
     git checkout --recurse-submodules $(mb) && git pull origin $(mb) || return 1
 }
 
@@ -124,5 +125,5 @@ then
     xset b off
 fi
 
-alias tf='cd ~/Documents/robota/tensorflight && source env2/bin/activate && cd code'
+alias tf='source ~/.virtualenvs/tensorflight/bin/activate && cd ~/tensorflight/code && source devops/vars.sh'
 
