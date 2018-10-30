@@ -21,6 +21,9 @@ alias grep='grep --color'
 alias sc='cat ~/.bash_history | grep -i '
 alias cls='printf "\033c"'
 
+stty werase '^H'
+bind '"\e[3;5~":kill-word'
+
 alias ii="git status && git branch -v"
 alias gf="find . | grep -i "
 alias gg='git grep -n'
@@ -63,7 +66,7 @@ function mm() {
     fi
     #git rebase origin/$(mb)
     git fetch || return 1
-    git checkout --recurse-submodules $(mb) && git pull origin $(mb) || return 1
+    git checkout --recurse-submodules $(mb) && git pull --recurse-submodules origin $(mb) || return 1
 }
 
 function startb() {
@@ -117,7 +120,7 @@ function __grename() {
 }
 
 #alias gpush='git diff && aa && printf "Commit message: " && read c && git commit -m "$c" && git pull && git push'
-alias gpush='git diff && aa && printf "Commit message: " && read c && git commit -m "$c" && git push'
+alias gpush='git diff && aa && printf "Commit message: " && read c && git commit -m "$c" && git push origin HEAD:$(git rev-parse --abbrev-ref HEAD)'
 
 XSET=$(which xset 2> /dev/null)
 if [ -f "$XSET" ] ;
