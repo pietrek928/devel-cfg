@@ -1,0 +1,33 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "clang.cxxflags": [
+        "-std=c++17"
+    ],
+    "kite.showWelcomeNotificationOnStartup": false,
+    "files.autoSave": "onFocusChange",
+    "files.associations": {
+        "*.h": "cpp"
+    },
+    "clangd.checkUpdates": true,
+    "clangd.fallbackFlags": [
+        "-std=c++17",
+        "-Irelative"
+    ],
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.tabWidth": 4,
+    "eslint.format.enable": true,
+    "editor.formatOnPaste": true,
+    "typescript.tsserver.maxTsServerMemory": 1024,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "typescript.preferences.quoteStyle": "single",
+    "codetogether.userName": "https://go.codetogether.com/#/122c0423-13c1-4b4c-ab74-d193dd200555/vH7o0POInI7AkKHWbpAKx2",
+    "prettier.singleQuote": true,
+}
