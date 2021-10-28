@@ -235,7 +235,7 @@ autocmd BufReadPost *
      \   exe "normal! g`\"" |
      \ endif
 " Remember info about open buffers on close
-set viminfo^=%
+set viminfo='20,<50000,%
 
 
 """"""""""""""""""""""""""""""
@@ -430,6 +430,9 @@ nnoremap <Bslash> <C-N>
 vnoremap <Bslash> <C-N>
 inoremap <Bslash> <C-N>
 
+set cpt=.,w,b,t,k.
+"set cpt=k/usr/dict/*,k~/spanish
+
 nnoremap <C-u> <C-r>
 inoremap <C-u> <Esc><C-r>
 
@@ -476,7 +479,7 @@ if has('mouse')
 endif
 
 set number
-nmap T NERDTree
+nmap T :NERDTree<CR>
 command Q q | q | q | q | q | q | q | q | q | q | q | q | q
 
 set shiftwidth=4 tabstop=4 expandtab
