@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export LANG="pl_PL.UTF-8 UTF-8"
+export LANG="en_US.UTF-8 UTF-8"
 export HISTFILESIZE=100000
 export HISTSIZE=100000
 
@@ -15,7 +15,7 @@ PS1='[\u@\h \W]\$ '
 export EDITOR="vim"
 export PS1="\[\033[1;38m\](\$(date +%H:%M:%S))\[\033[34m\]<\u@\h:\w>\[\033[0m\] "
 #export AVIPLUGIN_PATH="/usr/lib/avifile-0.7"
-alias playonlinux='optirun playonlinux'
+#alias playonlinux='optirun playonlinux'
 alias make='make -j 8'
 alias grep='grep --color'
 alias sc='cat ~/.bash_history | grep -i '
@@ -31,6 +31,10 @@ alias gga='git grep -A 5 -n'
 alias ggb='git grep -B 5 -n'
 alias ggab='git grep -A 5 -B 5 -n'
 alias ch='tail -n 10 ~/.bash_history'
+
+function fix() {
+    bb "origin/release/${1}.x" && git cherry-pick "$2" && git push origin "HEAD:release/${1}.x"
+}
 
 function mb() {
     cat "$(git rev-parse --show-toplevel)/.main-branch" || echo master
@@ -128,5 +132,7 @@ then
     xset b off
 fi
 
-alias tf='source ~/.virtualenvs/tensorflight/bin/activate && cd ~/tensorflight/code && source devops/vars.sh'
+alias tf='source ~/.virtualenvs/py3/bin/activate && cd ~/Documents/robota/tensorflight/code'
+alias tf2='source ~/.virtualenvs/py3/bin/activate && cd ~/Documents/robota/tensorflight/code2'
+alias st='cd ~/Documents/stud && source env/bin/activate'
 
