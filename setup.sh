@@ -1,5 +1,5 @@
 #!/bin/bash
-CFG=".Xresources .bashrc .gitconfig .vimrc"
+CFG="$(pwd)/.Xresources $(pwd)/.bashrc $(pwd)/.gitconfig $(pwd)/.vimrc"
 
 mkdir -p ~/.config/openbox/ ~/.config/lxpanel/LXDE/panels/
 
