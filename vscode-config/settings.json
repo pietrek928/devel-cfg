@@ -30,4 +30,6 @@
     "typescript.preferences.quoteStyle": "single",
     "codetogether.userName": "https://go.codetogether.com/#/122c0423-13c1-4b4c-ab74-d193dd200555/vH7o0POInI7AkKHWbpAKx2",
     "prettier.singleQuote": true,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.preferredDarkColorTheme": "Visual Studio Dark",
 }
