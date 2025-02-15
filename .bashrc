@@ -132,7 +132,3 @@ then
     xset b off
 fi
 
-alias tf='source ~/.virtualenvs/py3/bin/activate && cd ~/Documents/robota/tensorflight/code'
-alias tf2='source ~/.virtualenvs/py3/bin/activate && cd ~/Documents/robota/tensorflight/code2'
-alias st='cd ~/Documents/stud && source env/bin/activate'
-
