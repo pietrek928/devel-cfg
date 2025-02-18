@@ -39,7 +39,7 @@
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "workbench.colorTheme": "Default Dark Modern",
-    "terminal.integrated.sendKeybindingsToShell": true,
+    "terminal.integrated.sendKeybindingsToShell": false,
     "git.openRepositoryInParentFolders": "always",
     "window.openFoldersInNewWindow": "on"
 }
