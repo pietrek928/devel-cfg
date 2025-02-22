@@ -41,5 +41,6 @@
     "workbench.colorTheme": "Default Dark Modern",
     "terminal.integrated.sendKeybindingsToShell": false,
     "git.openRepositoryInParentFolders": "always",
-    "window.openFoldersInNewWindow": "on"
+    "window.openFoldersInNewWindow": "on",
+    "C_Cpp.intelliSenseEngine": "disabled"
 }

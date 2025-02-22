@@ -1,0 +1,9 @@
+services:
+  vscode-pietrek:
+    build:
+      context: .
+    ports:
+      - "8500:8080"
+    volumes:
+      - ./projects:/home/coder/projects
+    restart: always
