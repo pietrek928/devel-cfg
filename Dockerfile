@@ -3,12 +3,13 @@ FROM ubuntu:latest
 RUN curl -fsSL https://deb.nodesource.com/setup.x | bash -
 
 # Update and install necessary packages
-RUN apt-get update -y && apt-get upgrade -y && apt-get install -y \
-    make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev git \
+RUN apt-get update -y && apt-get upgrade -y \
+    && apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev git \
     libpq-dev \
     g++ clangd \
     nodejs npm \
-    curl \
+    curl software-properties-common \
+    libgeos-dev libspatialindex-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
