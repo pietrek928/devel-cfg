@@ -10,6 +10,7 @@ RUN apt-get update -y && apt-get upgrade -y \
     nodejs npm \
     curl software-properties-common \
     libgeos-dev libspatialindex-dev \
+    htop \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
