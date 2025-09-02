@@ -6,11 +6,11 @@ RUN curl -fsSL https://deb.nodesource.com/setup.x | bash -
 RUN apt-get update -y && apt-get upgrade -y \
     && apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev git \
     libpq-dev \
-    g++ clangd \
+    g++ clangd clang-format golang-go protobuf-compiler \
     nodejs npm \
     curl software-properties-common \
     libgeos-dev libspatialindex-dev \
-    htop \
+    htop nmap vim \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -34,7 +34,9 @@ RUN code-server --install-extension ms-python.python \
     && code-server --install-extension llvm-vs-code-extensions.vscode-clangd \
     && code-server --install-extension xaver.clang-format \
     && code-server --install-extension dbaeumer.vscode-eslint \
-    && code-server --install-extension angular.ng-template
+    && code-server --install-extension angular.ng-template \
+    && code-server --install-extension google.geminicodeassist \
+    && code-server --install-extension zxh404.vscode-proto3
 
 COPY --chown=coder:coder .vimrc .gitconfig .Xresources .bashrc /home/coder/
 COPY --chown=coder:coder vscode-config/settings.json vscode-config/keybindings.json /home/coder/.local/share/code-server/User/
