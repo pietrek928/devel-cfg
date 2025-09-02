@@ -3,8 +3,9 @@
     "clang.cxxflags": [
         "-std=c++17"
     ],
-    "kite.showWelcomeNotificationOnStartup": false,
     "files.autoSave": "onFocusChange",
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
     "files.associations": {
         "*.h": "cpp"
     },
@@ -29,7 +30,6 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "typescript.preferences.quoteStyle": "single",
-    "codetogether.userName": "https://go.codetogether.com/#/122c0423-13c1-4b4c-ab74-d193dd200555/vH7o0POInI7AkKHWbpAKx2",
     "prettier.singleQuote": true,
     "erlang_ls.trace.server": "messages",
     "erlang_ls.logLevel": "warning",
@@ -42,5 +42,22 @@
     "terminal.integrated.sendKeybindingsToShell": false,
     "git.openRepositoryInParentFolders": "always",
     "window.openFoldersInNewWindow": "on",
-    "C_Cpp.intelliSenseEngine": "disabled"
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "geminicodeassist.languages": [
+        "cpp",
+        "python",
+        "c",
+        "cython",
+        "dockerfile",
+        "go",
+        "java",
+        "javascript",
+        "javascriptreact",
+        "html",
+        "sql",
+        "typescript",
+        "typescriptreact",
+        "yaml"
+    ],
+    "geminicodeassist.updateChannel": "Insiders"
 }
