@@ -98,14 +98,14 @@
     <font place="ActiveOnScreenDisplay">
       <name>Sans</name>
       <size>8</size>
-      <weight></weight>
-      <slant></slant>
+      <weight/>
+      <slant/>
     </font>
     <font place="InactiveOnScreenDisplay">
       <name>Sans</name>
       <size>8</size>
-      <weight></weight>
-      <slant></slant>
+      <weight/>
+      <slant/>
     </font>
   </theme>
   <desktops>
@@ -252,6 +252,16 @@
     <keybind key="W-F4">
       <action name="Desktop">
         <desktop>4</desktop>
+      </action>
+    </keybind>
+    <keybind key="W-l">
+      <action name="Execute">
+        <command>xscreensaver-command -lock</command>
+      </action>
+    </keybind>
+    <keybind key="W-p">
+      <action name="Execute">
+        <command>setxkbmap pl</command>
       </action>
     </keybind>
     <keybind key="W-d">

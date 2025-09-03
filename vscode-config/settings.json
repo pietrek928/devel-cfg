@@ -9,7 +9,7 @@
     "files.associations": {
         "*.h": "cpp"
     },
-    "clangd.checkUpdates": true,
+    "clangd.checkUpdates": false,
     "clangd.fallbackFlags": [
         "-std=c++17",
         "-Irelative",

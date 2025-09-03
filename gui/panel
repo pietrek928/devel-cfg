@@ -19,7 +19,7 @@ Global {
   fontcolor=#ffffff
   background=1
   backgroundfile=/usr/share/lxpanel/images/background.png
-  monitor=1
+  monitor=0
 }
 Plugin {
   type=space
@@ -51,6 +51,18 @@ Plugin {
   Config {
     Button {
       id=pcmanfm.desktop
+    }
+    Button {
+      id=tor-browser.desktop
+    }
+    Button {
+      id=brave-browser.desktop
+    }
+    Button {
+      id=pycharm.desktop
+    }
+    Button {
+      id=code.desktop
     }
     Button {
       id=firefox-limited.desktop

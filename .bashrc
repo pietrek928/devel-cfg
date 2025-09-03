@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export LANG="en_US.UTF-8 UTF-8"
+export LANG="en_US.utf8"
 export HISTFILESIZE=100000
 export HISTSIZE=100000
 
@@ -18,7 +18,7 @@ export PS1="\[\033[1;38m\](\$(date +%H:%M:%S))\[\033[34m\]<\u@\h:\w>\[\033[0m\] 
 #alias playonlinux='optirun playonlinux'
 alias make='make -j 8'
 alias grep='grep --color'
-alias sc='cat ~/.bash_history | grep -i '
+alias sc='cat ~/.bash_history | grep -a -i '
 alias cls='printf "\033c"'
 
 stty werase '^H'
@@ -123,12 +123,14 @@ function __grename() {
     git grep -l "$1" | xargs sed -i "s/$1/$2/g"
 }
 
-#alias gpush='git diff && aa && printf "Commit message: " && read c && git commit -m "$c" && git pull && git push'
-alias gpush='git diff && aa && printf "Commit message: " && read c && git commit -m "$c" && git push origin HEAD:$(git rev-parse --abbrev-ref HEAD)'
+alias gpush='git diff && aa && printf "Commit message: " && read c && git commit -m "$c" && git push -u origin HEAD:$(git rev-parse --abbrev-ref HEAD)'
 
 XSET=$(which xset 2> /dev/null)
 if [ -f "$XSET" ] ;
 then
     xset b off
 fi
+
+export DATASET_PATH="/run/media/pietrek/C068DF4C68DF4038/data/datasets"
+export CHECKPOINT_PATH="/run/media/pietrek/C068DF4C68DF4038/data/checkpoints"
 

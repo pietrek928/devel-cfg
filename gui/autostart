@@ -1,7 +1,8 @@
 @sh .screenlayout/a.sh
 @lxpanel --profile LXDE
+@xcompmgr -c
 @pcmanfm --desktop --profile LXDE
 @xscreensaver -no-splash
 @guake
-@slack
+@discord
 @setxkbmap pl

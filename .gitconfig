@@ -5,7 +5,16 @@
 	default = current
 [core]
 	editor = vim
+	autocrlf = input
 [credential "https://github.com"]
 	username = pietrek928
 [credential]
 	helper = store
+[pull]
+	rebase = false
+[init]
+	defaultBranch = master
+[alias]
+	squash-all = "!f(){ git reset $(git commit-tree HEAD^{tree} -m \"${1:-A new start}\");};f"
+[safe]
+	directory = /mnt/data/data-process
