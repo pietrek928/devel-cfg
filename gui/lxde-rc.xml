@@ -224,6 +224,15 @@
         <wrap>no</wrap>
       </action>
     </keybind>
+    <keybind key="W-L">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Lock</name>
+        </startupnotify>
+        <command>xflock4</command>
+      </action>
+    </keybind>
     <keybind key="W-1">
       <action name="MoveResizeTo">
         <monitor>1</monitor>
@@ -353,6 +362,13 @@
     <keybind key="XF86Display">
       <action name="Execute">
         <command>lxrandr</command>
+      </action>
+    </keybind>
+    <keybind key="W-b">
+      <action name="Execute">
+        <command>
+            /bin/bash -c "$HOME/.config/openbox/bt_toggle.sh"
+        </command>
       </action>
     </keybind>
   </keyboard>

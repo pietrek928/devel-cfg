@@ -59,5 +59,8 @@
         "typescriptreact",
         "yaml"
     ],
-    "geminicodeassist.updateChannel": "Insiders"
+    "geminicodeassist.updateChannel": "Insiders",
+    "idf.hasWalkthroughBeenShown": true,
+    "idf.gitPath": "git",
+    "jupyter.askForKernelRestart": false
 }

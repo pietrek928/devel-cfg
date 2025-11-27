@@ -5,6 +5,7 @@ mkdir -p ~/.config/openbox/ ~/.config/lxpanel/LXDE/panels/
 
 cp -sb $CFG ~/
 cp -sb $(pwd)/gui/lxde-rc.xml ~/.config/openbox/
+cp -sb $(pwd)/gui/bt_toggle.sh ~/.config/openbox/
 cp -sb $(pwd)/gui/panel ~/.config/lxpanel/LXDE/panels/
 cp -sb $(pwd)/gui/autostart ~/.config/lxsession/LXDE/
 xrdb ~/.Xresources
