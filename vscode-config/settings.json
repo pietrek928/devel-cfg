@@ -59,6 +59,8 @@
         "typescriptreact",
         "yaml"
     ],
+    "geminicodeassist.project": "",
+    "geminicodeassist.inlineSuggestions.nextEditPredictions": true,
     "geminicodeassist.updateChannel": "Insiders",
     "idf.hasWalkthroughBeenShown": true,
     "idf.gitPath": "git",
