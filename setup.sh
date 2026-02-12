@@ -1,5 +1,5 @@
 #!/bin/bash
-CFG="$(pwd)/.Xresources $(pwd)/.bashrc $(pwd)/.gitconfig $(pwd)/.vimrc"
+CFG="$(pwd)/.Xresources $(pwd)/.bashrc $(pwd)/.gitconfig $(pwd)/.vimrc $(pwd)/.tmux.conf"
 
 mkdir -p ~/.config/openbox/ ~/.config/lxpanel/LXDE/panels/
 
@@ -11,6 +11,8 @@ cp -sb $(pwd)/gui/autostart ~/.config/lxsession/LXDE/
 xrdb ~/.Xresources
 dconf load /apps/guake/ < ./gui/guake.ini
 
+mkdir -p ~/.tmux/plugins
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 VSCODE_DIR="$HOME/.config/${VSCODE_PROFILE:-Code - OSS}/User"
 mkdir -p "$VSCODE_DIR" && cp -sb "$(pwd)/vscode-config"/*.json "$VSCODE_DIR/"
-
