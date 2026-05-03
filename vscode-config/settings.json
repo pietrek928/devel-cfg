@@ -60,9 +60,10 @@
         "yaml"
     ],
     "geminicodeassist.project": "",
-    "geminicodeassist.inlineSuggestions.nextEditPredictions": true,
     "geminicodeassist.updateChannel": "Insiders",
     "idf.hasWalkthroughBeenShown": true,
     "idf.gitPath": "git",
-    "jupyter.askForKernelRestart": false
+    "jupyter.askForKernelRestart": false,
+    "python.defaultInterpreterPath": "/sbin/python",
+    "diffEditor.codeLens": true
 }

@@ -133,4 +133,3 @@ fi
 
 export DATASET_PATH="/run/media/pietrek/C068DF4C68DF4038/data/datasets"
 export CHECKPOINT_PATH="/run/media/pietrek/C068DF4C68DF4038/data/checkpoints"
-
