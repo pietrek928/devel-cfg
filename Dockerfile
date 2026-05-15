@@ -57,14 +57,14 @@ COPY --chown=coder:coder .vimrc .gitconfig .Xresources .bashrc .tmux.conf /home/
 COPY --chown=coder:coder vscode-config/settings.json vscode-config/keybindings.json /home/coder/.local/share/code-server/User/
 
 # Set up workspace directory
-RUN mkdir -p /home/coder/projects
+RUN mkdir -p /home/coder/projects /home/coder/.ssh
 WORKDIR /home/coder/projects
 
 # Expose the VS Code Server port
 EXPOSE 8080
 
 ENV NO_OPEN_BROWSER=1
-ENV PATH="$PYENV_ROOT/bin:$HOME/.local/bin:$PATH"
+ENV PATH="$PYENV_ROOT/bin:/home/coder/.local/bin:$PATH"
 
 # Start VS Code Server
 CMD ["code-server", "--auth", "none", "--bind-addr", "0.0.0.0:8080", "."]
