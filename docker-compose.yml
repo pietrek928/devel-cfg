@@ -6,4 +6,8 @@ services:
       - "8500:8080"
     volumes:
       - ./projects:/home/coder/projects
+      - ssh_keys_volume:/home/coder/.ssh
     restart: always
+
+volumes:
+  ssh_keys_volume:

@@ -131,5 +131,19 @@ then
     xset b off
 fi
 
+KEY_DIR="$HOME/.ssh"
+KEY_FILE="$KEY_DIR/id_ecdsa"
+
+# Check if the key already exists
+if [ ! -f "$KEY_FILE" ]; then
+    echo "SSH key not found. Generating a new ECDSA 521-bit key..."
+    mkdir -p "$KEY_DIR"
+    chmod 700 "$KEY_DIR"
+    ssh-keygen -t ecdsa -b 521 -f "$KEY_FILE" -N "" -q
+    chmod 600 "$KEY_FILE"
+    chmod 644 "$KEY_FILE.pub"
+    echo "Key generation complete."
+fi
+
 export DATASET_PATH="/run/media/pietrek/C068DF4C68DF4038/data/datasets"
 export CHECKPOINT_PATH="/run/media/pietrek/C068DF4C68DF4038/data/checkpoints"

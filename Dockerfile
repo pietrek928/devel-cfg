@@ -65,5 +65,6 @@ EXPOSE 8080
 
 ENV NO_OPEN_BROWSER=1
 ENV PATH="$PYENV_ROOT/bin:$HOME/.local/bin:$PATH"
+
 # Start VS Code Server
 CMD ["code-server", "--auth", "none", "--bind-addr", "0.0.0.0:8080", "."]
